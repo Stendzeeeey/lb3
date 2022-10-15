@@ -1,0 +1,20 @@
+Дано целое число N (> 0). С помощью операций деления нацело и взятия остатка от деления определить, имеются ли в записи числа N нечетные цифры. Если имеются, то вывести True, если нет — вывести False.
+#include "pt4.h"
+#include <iostream>
+
+using namespace std;
+
+void Solve()
+{
+    Task("While21");
+    setlocale(LC_ALL, "Russian");
+    int n;
+    pt >> n;
+    while ((n > 0) && ((n % 10) % 2 == 0)) {
+        n /= 10;
+    }
+    if ((n % 10) % 2 != 0)
+        pt << "true";
+    else
+        pt << "false";
+}
